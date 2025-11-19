@@ -1,0 +1,14 @@
+{
+  "spearman_rho": -0.39740152204621965,
+  "spearman_p": 4.241374690400279e-24,
+  "logistic_auc": 0.9205724508050089,
+  "logistic_pseudo_r2": 0.38999123649739975,
+  "interaction_coeff": -79.17823926996766,
+  "interaction_p": 1.3860195587926407e-07,
+  "amplitude_coeff": -4.404432992845256,
+  "distance_coeff": 1.521057056712603,
+  "critical_distance": 0.1,
+  "risk_ratio": 2.8,
+  "height_level_n": 599,
+  "measurement_level_n": 3594
+}

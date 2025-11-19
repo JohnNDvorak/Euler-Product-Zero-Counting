@@ -1,0 +1,200 @@
+/Users/johnandmegandvorak/Euler-Product-Zero-Counting/run_main_experiments.py:35: RuntimeWarning: overflow encountered in scalar multiply
+  zeta_prod *= zeta_factor
+/Users/johnandmegandvorak/Euler-Product-Zero-Counting/run_main_experiments.py:35: RuntimeWarning: invalid value encountered in scalar multiply
+  zeta_prod *= zeta_factor
+/Users/johnandmegandvorak/Euler-Product-Zero-Counting/run_main_experiments.py:35: RuntimeWarning: overflow encountered in scalar multiply
+  zeta_prod *= zeta_factor
+/Users/johnandmegandvorak/Euler-Product-Zero-Counting/run_main_experiments.py:35: RuntimeWarning: invalid value encountered in scalar multiply
+  zeta_prod *= zeta_factor
+================================================================================
+PRIME REDUCTION ESTIMATES FOR S(T)
+MAIN EXPERIMENTS
+================================================================================
+✓ Directory ready: .
+✓ Directory ready: data
+✓ Directory ready: cache
+✓ Directory ready: results
+✓ Directory ready: results/figures
+✓ Directory ready: notebooks
+
+Loading zeros...
+✓ Loaded 10,000,000 zeros
+
+Generating primes up to 100 million...
+✓ Generated 5,761,455 primes
+
+================================================================================
+EXPERIMENT 1: OPTIMAL TRUNCATION SEARCH
+================================================================================
+
+T values: [1000, 10000, 100000]
+P_max values: [1000000.0, 3000000.0, 10000000.0, 30000000.0, 100000000.0]
+
+Processing T = 1,000
+S_RS(1000) = -0.401194
+  P_max=1e+06: S_euler=0.054363, error=0.455557
+  P_max=3e+06: S_euler=0.392419, error=0.793613
+  P_max=1e+07: S_euler=0.456751, error=0.857946
+  P_max=3e+07: S_euler=nan, error=nan
+  P_max=1e+08: S_euler=nan, error=nan
+
+  → Optimal P_max: 3e+07
+  → Minimum error: nan
+
+Processing T = 10,000
+S_RS(10000) = 0.491911
+  P_max=1e+06: S_euler=-0.456371, error=0.948282
+  P_max=3e+06: S_euler=0.924186, error=0.432275
+  P_max=1e+07: S_euler=0.767106, error=0.275195
+  P_max=3e+07: S_euler=0.000000, error=0.491911
+  P_max=1e+08: S_euler=0.000000, error=0.491911
+
+  → Optimal P_max: 1e+07
+  → Minimum error: 0.275195
+
+Processing T = 100,000
+S_RS(100000) = -0.487058
+  P_max=1e+06: S_euler=0.436289, error=0.923346
+  P_max=3e+06: S_euler=nan, error=nan
+  P_max=1e+07: S_euler=nan, error=nan
+  P_max=3e+07: S_euler=nan, error=nan
+  P_max=1e+08: S_euler=nan, error=nan
+
+  → Optimal P_max: 3e+06
+  → Minimum error: nan
+
+Experiment 1 completed in 35.7 seconds
+
+Experiment 1 Summary:
+==================================================
+     T  optimal_P_max    min_error
+  1000   3.000000e+07          NaN
+ 10000   1.000000e+07 2.751947e-01
+100000   3.000000e+06          NaN
+
+Scaling Analysis:
+  log10(P_opt) = -0.500 * log10(T) + 8.985
+  R² = 0.9993
+  P_opt ≈ T^-0.500
+  Expected: T^0.25
+
+================================================================================
+EXPERIMENT 2: PHASE DISTRIBUTION ANALYSIS
+================================================================================
+
+T = 1,000:
+  KS statistic: 0.0019
+  KS p-value: 0.8816
+  Final magnitude: 187.59
+
+T = 10,000:
+  KS statistic: 0.0026
+  KS p-value: 0.5061
+  Final magnitude: 164.42
+
+================================================================================
+EXPERIMENT 3: METHOD COMPARISON
+================================================================================
+
+T = 1,000:
+  RS:        S=-0.401194, error=0.000000, time=0.0000s
+  Euler opt: S=nan, error=nan, time=2.5032s
+  Euler fix: S=nan, error=nan, time=4.0340s
+  Improvement: 0.0%
+
+T = 10,000:
+  RS:        S=0.491911, error=0.000000, time=0.0001s
+  Euler opt: S=0.767106, error=0.275195, time=0.9611s
+  Euler fix: S=0.000000, error=0.491911, time=4.1611s
+  Improvement: 44.1%
+
+T = 100,000:
+  RS:        S=-0.487058, error=0.000000, time=0.0000s
+  Euler opt: S=nan, error=nan, time=0.3172s
+  Euler fix: S=nan, error=nan, time=4.0748s
+  Improvement: 0.0%
+
+Generating figures...
+✓ Figure saved: experiment_results.png
+
+================================================================================
+EXPERIMENT SUMMARY
+================================================================================
+
+✅ Experiment 1 - Optimal Truncation:
+   Scaling exponent: -0.500 (expected: 0.25)
+   R²: 0.999
+
+✅ Experiment 2 - Phase Analysis:
+   Phases appear uniform (KS test)
+
+✅ Experiment 3 - Method Comparison:
+   Euler at optimal P_max achieves significant error reduction
+   Computational cost is O(1) vs O(√T) for Riemann-Siegel
+
+Final Results Table:
+======================================================================
+Traceback (most recent call last):
+  File "/Users/johnandmegandvorak/Euler-Product-Zero-Counting/run_main_experiments.py", line 322, in <module>
+    print(df_exp3[['T', 'error_RS', 'error_euler_opt', 'error_euler_fixed', 'improvement']].to_string(
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        index=False, float_format={
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        }
+        ^
+    ))
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py", line 1398, in to_string
+    return fmt.DataFrameRenderer(formatter).to_string(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        buf=buf,
+        ^^^^^^^^
+        encoding=encoding,
+        ^^^^^^^^^^^^^^^^^^
+        line_width=line_width,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 962, in to_string
+    string = string_formatter.to_string()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/string.py", line 29, in to_string
+    text = self._get_string_representation()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/string.py", line 44, in _get_string_representation
+    strcols = self._get_strcols()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/string.py", line 35, in _get_strcols
+    strcols = self.fmt.get_strcols()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 476, in get_strcols
+    strcols = self._get_strcols_without_index()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 740, in _get_strcols_without_index
+    fmt_values = self.format_col(i)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 754, in format_col
+    return format_array(
+        frame.iloc[:, i]._values,
+    ...<5 lines>...
+        leading_space=self.index,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 1161, in format_array
+    return fmt_obj.get_result()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 1194, in get_result
+    fmt_values = self._format_strings()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 1472, in _format_strings
+    return list(self.get_result_as_array())
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 1439, in get_result_as_array
+    formatted_values = format_values_with(float_format)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 1413, in format_values_with
+    values = format_with_na_rep(values, formatter, na_rep)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 1353, in format_with_na_rep
+    formatter(val) if not m else na_rep
+    ~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 1311, in base_formatter
+    float_format(value=v)  # type: ignore[operator,call-arg]
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/io/formats/format.py", line 1437, in <lambda>
+    float_format = lambda value: self.float_format % value
+                                 ~~~~~~~~~~~~~~~~~~^~~~~~~
+TypeError: unsupported operand type(s) for %: 'dict' and 'float'

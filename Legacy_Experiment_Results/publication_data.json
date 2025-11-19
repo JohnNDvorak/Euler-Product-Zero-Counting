@@ -1,0 +1,29 @@
+{
+  "correlation": {
+    "spearman_rho": -0.39740152204621965,
+    "spearman_p": 4.241374690400279e-24,
+    "sample_size": 599,
+    "interpretation": "Strong threshold at d_norm \u2248 0.1"
+  },
+  "logistic_three_factor": {
+    "auc": 0.9205724508050089,
+    "pseudo_r2": 0.38999123649739975,
+    "interaction_coeff": -79.17823926996766,
+    "interaction_p": 1.3860195587926407e-07,
+    "interaction_se": 17.26522181473668,
+    "amplitude_coeff": -4.404432992845256,
+    "distance_coeff": 1.521057056712603,
+    "sample_size": 599,
+    "interpretation": "Super-multiplicative effect confirmed"
+  },
+  "threshold": {
+    "critical_distance": 0.1,
+    "risk_ratio": 2.8,
+    "selberg_prediction": 0.08685889638065036
+  },
+  "coefficient_summability": {
+    "prime_power_contribution": 0.0273,
+    "exponent_alpha": 0.008,
+    "validation": "Primes-only truncation is structurally natural"
+  }
+}

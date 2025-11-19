@@ -1,0 +1,44 @@
+# Configuration for Prime Reduction Estimates for S(T)
+
+paths:
+  base: "."
+  data: "data"
+  cache: "cache"
+  results: "results"
+  figures: "results/figures"
+  notebooks: "notebooks"
+
+data:
+  zeros_file: "10M_zeta_zeros.txt"
+  prime_cache: "prime_cache_1B.pkl"
+  max_zeros: 10000000
+  max_prime: 1000000000
+
+experiments:
+  t_values: [1000, 10000, 100000, 1000000, 10000000]
+  p_max_min: 1000000
+  p_max_max: 1000000000
+  p_max_points: 50
+
+  # Phase cancellation tests
+  phase_test_t: [1000, 10000, 100000, 1000000]
+  phase_max_primes: 100000
+  phase_p_max: 200000000
+
+  # Growth rate analysis
+  growth_points: 10
+  growth_t_fixed: 10000
+
+computation:
+  precision: 50  # mpmath precision
+  chunk_size: 1000000
+  cache_primes: true
+
+visualization:
+  dpi: 300
+  figure_format: "png"
+  color_palette: "husl"
+
+export:
+  format: ["csv", "pkl", "png"]
+  significant_digits: 6

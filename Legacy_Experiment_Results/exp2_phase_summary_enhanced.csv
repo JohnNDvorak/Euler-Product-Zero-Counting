@@ -1,0 +1,22 @@
+Test,T,Metric,Value,Pass
+Uniformity,1000,KS p-value,0.00033451817103125216,False
+Uniformity,10000,KS p-value,0.9615291645168321,True
+Uniformity,100000,KS p-value,0.9895563946600403,True
+Uniformity,1000000,KS p-value,0.5446304447916521,True
+Uniformity,10000000,KS p-value,0.9751287547579386,True
+Growth Rate,10000,Best R²,0.2556660930859399,False
+Random Signs,1000,Z-score,0.8598865763023021,True
+Random Signs,10000,Z-score,0.353270510947371,True
+Random Signs,100000,Z-score,-0.6225291465252465,True
+Random Signs,1000000,Z-score,-0.15481526690367634,True
+Random Signs,10000000,Z-score,-0.4980069272759879,True
+Autocorrelation,1000,% outside CI,100.0,False
+Autocorrelation,10000,% outside CI,100.0,False
+Autocorrelation,100000,% outside CI,100.0,False
+Autocorrelation,1000000,% outside CI,100.0,False
+Autocorrelation,10000000,% outside CI,21.0,False
+Phase Circle,1000,χ² p-value,0.984234171397348,True
+Phase Circle,10000,χ² p-value,0.08076699814726936,True
+Phase Circle,100000,χ² p-value,0.25626053287159883,True
+Phase Circle,1000000,χ² p-value,0.24528429120047818,True
+Phase Circle,10000000,χ² p-value,0.7348882301141952,True

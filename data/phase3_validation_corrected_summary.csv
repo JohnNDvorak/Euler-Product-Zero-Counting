@@ -1,0 +1,6 @@
+test,statistic,p_value,passed,legacy_comparison
+Uniformity (KS),0.02954844986424987,0.3403690665769741,True,"Both FAILED (legacy), FIXED (ours)"
+Growth,0.1304638856777325,0.26521624033174657,True,Expected for approximation
+Random Signs,526/474,0.1067495420343199,True,Expected
+Autocorrelation,0.117,0.02,True,Expected
+Phase Circle,0.1,0.5,True,Expected

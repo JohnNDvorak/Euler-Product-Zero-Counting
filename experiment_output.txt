@@ -1,0 +1,36 @@
+================================================================================
+PRIME REDUCTION ESTIMATES FOR S(T)
+Running Main Experiments
+================================================================================
+✓ Directory ready: .
+✓ Directory ready: data
+✓ Directory ready: cache
+✓ Directory ready: results
+✓ Directory ready: results/figures
+✓ Directory ready: notebooks
+
+Loading zeros from cache...
+✓ Loaded 10,000,000 zeros
+
+Generating primes up to 200 million...
+✓ Generated 11,078,937 primes
+✓ Saved to cache/prime_cache_200M.pkl
+
+================================================================================
+EXPERIMENT 1: OPTIMAL TRUNCATION SEARCH
+================================================================================
+
+T values: [1000, 10000, 100000, 1000000]
+P_max range: 1e+06 to 2e+08 (30 points)
+
+Finding optimal P_max for T = 1,000
+--------------------------------------------------
+Reference S_RS(1000) = -0.401194
+  Progress: 0/30 - P_max = 1.00e+06
+Traceback (most recent call last):
+  File "/Users/johnandmegandvorak/Euler-Product-Zero-Counting/run_experiments.py", line 126, in <module>
+    result = run_optimal_truncation(T, P_MAX_RANGE, zeros, primes)
+  File "/Users/johnandmegandvorak/Euler-Product-Zero-Counting/run_experiments.py", line 92, in run_optimal_truncation
+    S_e = S_euler_fast(T, P_max, primes)
+          ^^^^^^^^^^^^
+NameError: name 'S_euler_fast' is not defined

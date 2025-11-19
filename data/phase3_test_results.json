@@ -1,0 +1,38 @@
+{
+  "uniformity": {
+    "ks_statistic": 0.09004363180560648,
+    "p_value": 1.6646769653788642e-07,
+    "is_uniform": "False",
+    "chi2_stat": 0.0,
+    "chi2_pvalue": 1.0
+  },
+  "growth": {
+    "slope": 0.1304638856777325,
+    "r_squared": 0.07242627423415299,
+    "p_value": 0.26521624033174657,
+    "expected_slope": 0.5,
+    "growth_rate_ok": "False"
+  },
+  "random_signs": {
+    "n_positive": "526",
+    "n_negative": "474",
+    "n_zero": "0",
+    "p_positive": 0.526,
+    "binom_pvalue": 0.1067495420343199,
+    "n_sign_changes": "0",
+    "expected_changes": 500.0,
+    "is_random": "True"
+  },
+  "autocorrelation": {
+    "max_autocorr": 0.06341896283594756,
+    "significant_lags": "1",
+    "n_lags_tested": 50,
+    "is_independent": "True"
+  },
+  "phase_circle": {
+    "rayleigh_statistic": 0.1,
+    "rayleigh_pvalue": 0.5,
+    "mean_angle": 0.35144038648133696,
+    "is_uniform_on_circle": true
+  }
+}

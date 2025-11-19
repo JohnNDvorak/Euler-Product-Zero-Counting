@@ -1,0 +1,7 @@
+test,statistic,p_value,passed
+Uniformity (KS),0.09004363180560648,1.6646769653788642e-07,False
+Uniformity (Chi2),0.0,1.0,True
+Growth,0.1304638856777325,0.26521624033174657,False
+Random Signs,526/474,0.1067495420343199,True
+Autocorrelation,0.063,0.02,True
+Phase Circle,0.1,0.5,True

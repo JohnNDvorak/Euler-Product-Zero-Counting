@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_bak
+
+# Data and cache
+cache/
+*.pkl
+*.npy
+*.parquet
+data/raw/
+!data/raw/README.md
+
+# Results and figures
+results/temp/
+results/*.png
+results/*.pdf
+results/*.svg
+
+# OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Profiling
+*.prof
+*.lprof
+
+# Large files
+*.h5
+*.hdf5
+*.bin
+*.dat
+
+# Logs
+*.log
+logs/
